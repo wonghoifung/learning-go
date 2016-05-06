@@ -5,6 +5,7 @@ import (
   "os"
   "strconv"
   "./tempconv"
+  "./popcount"
 )
 
 func init() {
@@ -21,4 +22,5 @@ func main() {
     c := tempconv.Celsius(t)
     fmt.Printf("%s = %s, %s = %s\n", f, tempconv.FToC(f), c, tempconv.CToF(c))
   }
+  fmt.Println(popcount.PopCount(123))
 }
