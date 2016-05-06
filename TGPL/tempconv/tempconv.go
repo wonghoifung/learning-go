@@ -10,6 +10,8 @@ const (
   FreezingC Celsius = 0
   BoilingC Celsius = 100
 )
-
+func init() {
+  fmt.Println("tempconv init")
+}
 func (c Celsius) String() string { return fmt.Sprintf("%gC", c) }
 func (f Fahrenheit) String() string { return fmt.Sprintf("%gF", f) }
