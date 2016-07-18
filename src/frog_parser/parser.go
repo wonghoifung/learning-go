@@ -64,9 +64,9 @@ func (pp *PackParser) Init(){
 }
 
 func (pp *PackParser) read_header(data []byte, ndx *int)bool{
-	if *ndx==0{
-		pp.packpos = 0
-	}
+	//if *ndx==0{
+	//	pp.packpos = 0
+	//}
 	for pp.packpos<frog_codec.C_HEADER_SIZE && *ndx<len(data){
 		copy(pp.decoder.Data[pp.packpos:pp.packpos+1],data[*ndx:*ndx+1])
 		pp.packpos++
